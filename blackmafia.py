@@ -270,7 +270,7 @@ def meyexudi():
       print(meyermarexudi)
      # print(" \033[32;1m[+] Your Kay : "+id)
       print(' \x1b[38;5;208m╔══[𝟷] FREE USER NOT CAME INBOX')
-      print(' \x1b[38;5;208m╔══[𝟷] Username:umar/Password:116431')[
+      print(' \x1b[38;5;208m╔══[𝟷] Username:umar/Password:116431')
       print(' \x1b[1;97m║══[𝟸] FREE-FIRE-TIK-TOK- ID CLONING')
       print(' \x1b[1;91m║══[𝟸] ONLY ACTIVE ID CLONE')
       print(' \x1b[1;92m║══[𝟸] UNACTIVE ID NOT ALLOW')
