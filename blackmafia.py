@@ -270,6 +270,7 @@ def meyexudi():
       print(meyermarexudi)
      # print(" \033[32;1m[+] Your Kay : "+id)
       print(' \x1b[38;5;208m╔══[𝟷] FREE USER NOT CAME INBOX')
+      print(' \x1b[38;5;208m╔══[𝟷] Username:umar/Password:hacker')[
       print(' \x1b[1;97m║══[𝟸] FREE-FIRE-TIK-TOK- ID CLONING')
       print(' \x1b[1;91m║══[𝟸] ONLY ACTIVE ID CLONE')
       print(' \x1b[1;92m║══[𝟸] UNACTIVE ID NOT ALLOW')
@@ -303,7 +304,7 @@ while attemps < 12345677901:
     username = input('\033[1;91m[\033[1;92m√\033[1;91m]\x1b[38;5;50m ENTER USERNAME: ')
     password = input('\033[1;91m[\033[1;92m√\033[1;91m]\x1b[38;5;50m ENTER PASSWORD: ')
 
-    if username == 'WASIM' and password == '551144':
+    if username == 'umar' and password == 'hacker':
         print(' \033[0;92mYou Have Successfully Logged in.')
         break
     else:
