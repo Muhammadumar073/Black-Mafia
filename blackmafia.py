@@ -1,11 +1,4 @@
-"""
 
-REVERSE DONE BY BlackMafia  
-
-"""
-
-#-----------------[ BlackMafia -King ]-------------------#
- 
 import requests,bs4,json,os,sys,random,datetime,time,re
 import urllib3,rich,base64
 from rich.table import Table as me
@@ -57,7 +50,106 @@ ua = ["Mozilla/5.0 (Linux; Android 10; NEO-AL00 Build/HUAWEINEO-AL00; wv) AppleW
 ua = ["Mozilla/5.0 (Linux; Android 13; Infinix X6710 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/432.0.0.29.102;]",]
 ua = ["Mozilla/5.0 (Linux; Android 12; Infinix X676B Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/117.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/433.0.0.31.111",]
 ua = ["Mozilla/5.0 (Linux; Android 11; Infinix X6816D Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36[FBAN/EMA;FBLC/pl_PL;FBAV/373.1.0.8.104",]
- 
+ua = ["Mozilla/5.0 (Linux; Android 11; S35 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/449.0.0.44.115;]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; SM-A405FN Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;] [ip:79.22.26.226]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; 23100RN82L Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; REA-NX9 Build/HONORREA-N39; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; SM-A207F Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.232 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/443.0.0.43.117;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H307 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/16.7.5;FBSS/2;FBID/phone;FBLC/en_GB;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 8.1.0; SM-J260M Build/M1AJB; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.178 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone15,2;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; moto g(10) Build/RRBS31.Q1-3-48-22; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;] [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-A042M Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/443.0.0.23.229;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone11,8;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566213156]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H240 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone10,4;FBMD/iPhone;FBSN/iOS;FBSV/16.7.4;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566224526]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; SNE-LX3 Build/HUAWEISNE-LX3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;] [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,4;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566471385]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; motorola one Build/QPKS30.54-22-27; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/330.0.0.31.120;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,2;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/565968222]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H115 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone10,5;FBMD/iPhone;FBSN/iOS;FBSV/16.7.2;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566260713]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; POCOPHONE F1 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; motorola one fusion+ Build/RPIS31.Q2-42-25-3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21B101 [FBAN/FBIOS;FBAV/445.0.0.35.117;FBBV/548375166;FBDV/iPhone15,2;FBMD/iPhone;FBSN/iOS;FBSV/17.1.2;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/555570286]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; moto e20 Build/RONS31.267-94-14; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21D61 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone15,3;FBMD/iPhone;FBSN/iOS;FBSV/17.3.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566015725]",]
+ua = ["Mozilla/5.0 (Linux; Android 9; G60 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; Redmi Note 7 Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H240 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone10,5;FBMD/iPhone;FBSN/iOS;FBSV/16.7.4;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21B101 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone11,6;FBMD/iPhone;FBSN/iOS;FBSV/17.1.2;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; moto g62 5G Build/T1SSS33.1-119-8-4; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,8;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566323249]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; SM-A207M Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; moto e13 Build/TLAS33.105-257-3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-A032M Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/388.0.0.13.119;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; 21061110AG Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 15_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19H370 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone9,4;FBMD/iPhone;FBSN/iOS;FBSV/15.8;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566015725]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20B101 [FBAN/FBIOS;FBAV/446.0.0.32.330;FBBV/554572428;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/16.1.1;FBSS/2;FBID/phone;FBLC/en_GB;FBOP/5;FBRV/558404046] [ip:37.203.171.148]",]
+ua = ["Mozilla/5.0 (Linux; Android 8.1.0; SM-J260M Build/M1AJB; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.230 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/449.0.0.44.115;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; 2212ARNC4L Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;] [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPad; CPU OS 16_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20G81 [FBAN/FBIOS;FBAV/449.0.2.30.109;FBBV/561422023;FBDV/iPad12,2;FBMD/iPad;FBSN/iPadOS;FBSV/16.6.1;FBSS/2;FBID/tablet;FBLC/it_IT;FBOP/5;FBRV/565040379]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-A225M Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; LYA-L09 Build/HUAWEILYA-L09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/449.0.0.44.115;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/2;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21D61 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/17.3.1;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 8.0.0; moto e5 Build/OPPS27.91-176-11-16; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; moto g14 Build/TLB33.78-27-1; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C62 [FBAN/FBIOS;FBDV/iPad8,12;FBMD/iPad;FBSN/iOS;FBSV/17.2;FBSS/2;FBID/tablet;FBLC/it_IT;FBOP/5]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; SM-J810M Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 9; SM-J701MT Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/113.0.5672.77 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/449.0.0.44.115;]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; SM-A032M Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/392.0.0.13.114;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; SM-S908U Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; moto e22 Build/SOV32.121-56; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone15,3;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566180789]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; moto e(7) Build/QOFS30.569-83-18; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,7;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/565909303]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 15_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/19H370 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone9,2;FBMD/iPhone;FBSN/iOS;FBSV/15.8;FBSS/3;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/566260713]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; MI 8 Lite Build/QKQ1.190910.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/444.1.0.49.109;]",]
+ua = ["Mozilla/5.0 (Linux; Android 8.0.0; SM-G930F Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; Pixel 4a Build/TQ3A.230805.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; 2201117PG Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; moto e13 Build/TLAS33.105-257-3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/392.0.0.13.114;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,8;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566260713]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H30 [FBAN/FBIOS;FBAV/449.0.2.30.109;FBBV/561422023;FBDV/iPhone11,8;FBMD/iPhone;FBSN/iOS;FBSV/16.7.1;FBSS/2;FBID/phone;FBLC/pt_BR;FBOP/5;FBRV/565040379]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_7_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20H240 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone10,1;FBMD/iPhone;FBSN/iOS;FBSV/16.7.4;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20A362 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone12,8;FBMD/iPhone;FBSN/iOS;FBSV/16.0;FBSS/2;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566260713]",]
+ua = ["Mozilla/5.0 (Linux; Android 8.1.0; Redmi 5 Plus Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-A032M Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/20F66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone13,4;FBMD/iPhone;FBSN/iOS;FBSV/16.5;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; SM-A035M Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; CPH2483 Build/UP1A.230620.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/447.0.0.24.113;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-A032M Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/447.0.0.24.113;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-G988B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["SupportsFresco=1 modular=2 Dalvik/2.1.0 (Linux; U; Android 12; SM-A125U1 Build/SP1A.210812.016) [FBAN/EMA;FBBV/565431514;FBAV/394.0.0.11.107;FBDV/SM-A125U1;FBSV/12;FBCX/OkHttp3;FBDM/{density=1.875}]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; SM-A115M Build/RP1A.200720.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; Nokia 5.4 Build/SKQ1.220119.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,5;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566344788]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-A125M Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21D61 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone13,4;FBMD/iPhone;FBSN/iOS;FBSV/17.3.1;FBSS/3;FBID/phone;FBLC/nl_NL;FBOP/5;FBRV/565715620]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566323249]",]
+ua = ["Mozilla/5.0 (Linux; Android 11; RMX3201 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/120.0.6099.207 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/446.0.0.27.352;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; SM-S916U Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/449.0.0.44.115;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone13,2;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/566213156]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-G986B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-G973U Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.164 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; 21121119SG Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36[FBAN/EMA;FBLC/pt_BR;FBAV/394.0.0.11.107;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; SM-S911U Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; V2110 Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone15,4;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/566260713]",]
+ua = ["Mozilla/5.0 (Linux; Android 10; Redmi Note 9S Build/QKQ1.191215.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-A236U Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;] [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; 220733SG Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; SM-A236U Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21B91 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone14,4;FBMD/iPhone;FBSN/iOS;FBSV/17.1.1;FBSS/3;FBID/phone;FBLC/it_IT;FBOP/5;FBRV/565993070]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/450.0.0.38.108;FBBV/564431005;FBDV/iPhone13,2;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/fr_FR;FBOP/5;FBRV/566180789]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; motorola edge 5G UW (2021) Build/T1RM33.1-110-17; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-G973U Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 13; ASUS_AI2202 Build/TKQ1.220807.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; SM-M146B Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21C66 [FBAN/FBIOS;FBAV/448.1.0.39.110;FBBV/559583292;FBDV/iPhone14,7;FBMD/iPhone;FBSN/iOS;FBSV/17.2.1;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/563975437]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; moto g32 Build/S2SN32.34-72-46; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.157 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 14; SM-S901U Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
+ua = ["Mozilla/5.0 (Linux; Android 12; SM-A037U Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.143 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/450.0.0.42.110;]",]
 ugen2=[]
 ugen=[]
 cokbrut=[]
@@ -224,18 +316,24 @@ def animation(u):
 os.system('xdg-open https://www.facebook.com/suresh.ahamed?mibextid=ZbWKwL')
 logo =(f"""
 \033[0;92m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
-\033[0;92m╔═╗╔╗ ╦╦═╗   ╦╦ ╦╔╗ ╔═╗╦ ╦╔═╗╦═╗
-\033[0;92m╠═╣╠╩╗║╠╦╝───║║ ║╠╩╗╠═╣╚╦╝║╣ ╠╦╝
-\033[0;92m╩ ╩╚═╝╩╩╚═  ╚╝╚═╝╚═╝╩ ╩ ╩ ╚═╝╩╚═
+\033[0;92m__       __      __    __                                   
+\033[0;92m/  \     /  |    /  |  /  |                                  
+\033[0;92m$$  \   /$$ |    $$ |  $$ | _____  ____    ______    ______  
+\033[0;92m$$$  \ /$$$ |    $$ |  $$ |/     \/    \  /      \  /      \ 
+\033[0;92m$$$$  /$$$$ |    $$ |  $$ |$$$$$$ $$$$  | $$$$$$  |/$$$$$$  |
+\033[0;92m$$ $$ $$/$$ |    $$ |  $$ |$$ | $$ | $$ | /    $$ |$$ |  $$/ 
+\033[0;92m$$ |$$$/ $$ | __ $$ \__$$ |$$ | $$ | $$ |/$$$$$$$ |$$ |      
+\033[0;92m$$ | $/  $$ |/  |$$    $$/ $$ | $$ | $$ |$$    $$ |$$ |      
+\033[0;92m$$/      $$/ $$/  $$$$$$/  $$/  $$/  $$/  $$$$$$$/ $$/       
 \033[0;92m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝                       
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 ║\33[0;41m        [ WORKING ONLY MOBILE DATA ]         \033[0;92m║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 \033[0;94m╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\033[1;33m 
-╠══[Author                   • \33[1;38mBlackMafia -BRO ]\33[1;38m    ║\033[1;31m 
-╠══[Facebook                 • BlackMafia 360       ║  \033[1;97m  
-╠══[Github                   • \33[1;38mBlackMafia moulik008 ║\33[1;34m   
-╠══[Whatsapp                 • 01*********    ║\33[1;35m 
+╠══[Author                   • \33[1;38mUMAR ]\33[1;38m    ║\033[1;31m 
+╠══[Facebook                 • Muhammad Umar       ║  \033[1;97m  
+╠══[Github                   • \33[1;38mMuhammadumar073 ║\33[1;34m   
+╠══[Whatsapp                 • +92 309 1235363    ║\33[1;35m 
 ╠══[TOOLS                    • PAID ]         ║ \33[1;32m   
 ╠══[VERSION                  • 1.0 ]          ║\033[1;35m 
 \033[0;94m╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝\033[1;31m
@@ -246,11 +344,11 @@ logo =(f"""
 \033[1;92m⊰᯽⊱┈──╌──────╌──╌╌──╌───╌❊╌──╌──╌────╌────╌─╌──┈⊰᯽⊱""")
 balpakna =("""\x1b[38;5;50m══════════════════════════════════════════════════""")    
 meyermarexudi =(""" \033[0;97m=============================================""")    
-alltimexudi =(""" \033[32;1m[-] ONLY APPROVAL SYSTEM 7 DEYS 250TK 30 500TK FOR    APPROVAL""")
+alltimexudi =(""" \033[32;1m[-] ONLY APPROVAL SYSTEM 7 DAYS 200PKR 30 DAYS 500PKR FOR    APPROVAL""")
 xudartimenai =(""" \033[32;1m[+] CONTACT ADMIN PLZ ENTAR""")
 fuckyoursali =(""" \033[32;1m[𝟷] 𝚈𝙾𝚄𝚁 𝚃𝙾𝙺𝙴𝙽 𝙸𝚂 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙿𝚁𝙾𝚅𝙴𝙳""")
 xudinaministar =(""" \033[32;1m[-] Importent Note """)
-hedaborakarent =(""" \033[32;1m[𝟸] 𝙵𝚄𝙲𝙺 𝙱𝚈𝙿𝙰𝚂𝙰𝚁 𝙲𝙷𝙰𝙺𝙴 𝚈𝙾𝚄𝚁 𝙳𝙰𝚃𝙰 """)
+hedaborakarent =(""" \033[32;1m[𝟸] USE MOBILE DATA FOR BEST RESULTS """)
 #____APPROVAL SYSTEM ADD_____#
 def meyexudi():
   os.system('clear')
@@ -276,7 +374,7 @@ def meyexudi():
       print(' \x1b[1;93m║══[𝟸] CP ID LOGIN 50%')
       print(' \x1b[1;94m║══[𝟸] WI-FI WORKING 80%')
       print(' \x1b[1;95m║══[𝟸] 15 DAY 200 PKR ')
-      print(' \x1b[38;5;50m║══[𝟸] 30 DAY 400 PKR')
+      print(' \x1b[38;5;50m║══[𝟸] 30 DAY 500 PKR')
       print(" \033[1;32m║══[𝟸] YOUR KEY : "+id)
       input(' \x1b[38;5;50m╚══[𝟹] IF U WANT TO BUY THEN PRESS ENTER ')
       tks = ('Hello%20Sir%20!%20Please%20Approve%20My%20Token%20The%20Token%20Is%20:%20'+id);os.system('am start https://wa.me/+923091235363?text='+tks),approval()      
